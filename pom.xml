@@ -78,7 +78,7 @@
 			<resource>
 				<targetPath>.</targetPath>
 				<filtering>false</filtering>
-				<directory>../</directory>
+				<directory>.</directory>
 				<includes>
 					<include>LICENSE</include>
 				</includes>
