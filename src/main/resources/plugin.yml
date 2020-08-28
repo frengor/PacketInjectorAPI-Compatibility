@@ -1,0 +1,9 @@
+name: ${project.name}
+main: com.fren_gor.packetInjectorAPI.PacketInjectorCompatibility
+version: ${project.version}
+author: fren_gor
+description: ${project.description}
+
+depend: [PacketInjectorAPI]
+
+api-version: 1.13
