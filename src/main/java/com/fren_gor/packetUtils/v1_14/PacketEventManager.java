@@ -27,8 +27,8 @@ import java.util.Map;
 import org.apache.commons.lang.Validate;
 
 import com.fren_gor.packetInjectorAPI.ReflectionUtil;
-import com.fren_gor.packetInjectorAPI.events.PacketRetriveEvent;
-import com.fren_gor.packetInjectorAPI.events.PacketSendEvent;
+import com.fren_gor.packetInjectorAPI.api.events.PacketRetriveEvent;
+import com.fren_gor.packetInjectorAPI.api.events.PacketSendEvent;
 import com.fren_gor.packetUtils.Main;
 
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceLinkedOpenHashMap;
@@ -37,8 +37,8 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public final class PacketEventManager {
 
-	private static Map<PacketSendListener, com.fren_gor.packetInjectorAPI.events.PacketSendListener> SEND_LISTENERS = new Reference2ReferenceLinkedOpenHashMap<>();
-	private static Map<PacketRetriveListener, com.fren_gor.packetInjectorAPI.events.PacketRetriveListener> RETRIVE_LISTENERS = new Reference2ReferenceLinkedOpenHashMap<>();
+	private static Map<PacketSendListener, com.fren_gor.packetInjectorAPI.api.listeners.PacketSendListener> SEND_LISTENERS = new Reference2ReferenceLinkedOpenHashMap<>();
+	private static Map<PacketRetriveListener, com.fren_gor.packetInjectorAPI.api.listeners.PacketRetriveListener> RETRIVE_LISTENERS = new Reference2ReferenceLinkedOpenHashMap<>();
 
 	/**
 	 * Register a packet send listener
@@ -50,9 +50,9 @@ public final class PacketEventManager {
 		Validate.notNull(listener, "PacketSendListener cannot be null");
 		if (ReflectionUtil.getVersion() < 14 || SEND_LISTENERS.containsKey(listener))
 			return;
-		com.fren_gor.packetInjectorAPI.events.PacketSendListener list;
-		com.fren_gor.packetInjectorAPI.events.PacketEventManager.registerPacketListener(Main.getInstance(),
-				list = new com.fren_gor.packetInjectorAPI.events.PacketSendListener() {
+		com.fren_gor.packetInjectorAPI.api.listeners.PacketSendListener list;
+		com.fren_gor.packetInjectorAPI.api.PacketEventManager.registerPacketListener(Main.getInstance(),
+				list = new com.fren_gor.packetInjectorAPI.api.listeners.PacketSendListener() {
 					@Override
 					public void onSend(PacketSendEvent event) {
 						listener.onSend(new com.fren_gor.packetUtils.events.PacketSendEvent(event));
@@ -71,9 +71,9 @@ public final class PacketEventManager {
 		Validate.notNull(listener, "PacketRetriveListener cannot be null");
 		if (ReflectionUtil.getVersion() < 14 || RETRIVE_LISTENERS.containsKey(listener))
 			return;
-		com.fren_gor.packetInjectorAPI.events.PacketRetriveListener list;
-		com.fren_gor.packetInjectorAPI.events.PacketEventManager.registerPacketListener(Main.getInstance(),
-				list = new com.fren_gor.packetInjectorAPI.events.PacketRetriveListener() {
+		com.fren_gor.packetInjectorAPI.api.listeners.PacketRetriveListener list;
+		com.fren_gor.packetInjectorAPI.api.PacketEventManager.registerPacketListener(Main.getInstance(),
+				list = new com.fren_gor.packetInjectorAPI.api.listeners.PacketRetriveListener() {
 					@Override
 					public void onRetrive(PacketRetriveEvent event) {
 						listener.onRetrive(new com.fren_gor.packetUtils.events.PacketRetriveEvent(event));
@@ -93,9 +93,9 @@ public final class PacketEventManager {
 		if (ReflectionUtil.getVersion() < 14) {
 			return;
 		}
-		com.fren_gor.packetInjectorAPI.events.PacketSendListener list = SEND_LISTENERS.remove(listener);
+		com.fren_gor.packetInjectorAPI.api.listeners.PacketSendListener list = SEND_LISTENERS.remove(listener);
 		if (list != null) {
-			com.fren_gor.packetInjectorAPI.events.PacketEventManager.unregisterPacketListener(list);
+			com.fren_gor.packetInjectorAPI.api.PacketEventManager.unregisterPacketListener(list);
 		}
 	}
 
@@ -110,9 +110,9 @@ public final class PacketEventManager {
 		if (ReflectionUtil.getVersion() < 14) {
 			return;
 		}
-		com.fren_gor.packetInjectorAPI.events.PacketRetriveListener list = RETRIVE_LISTENERS.remove(listener);
+		com.fren_gor.packetInjectorAPI.api.listeners.PacketRetriveListener list = RETRIVE_LISTENERS.remove(listener);
 		if (list != null) {
-			com.fren_gor.packetInjectorAPI.events.PacketEventManager.unregisterPacketListener(list);
+			com.fren_gor.packetInjectorAPI.api.PacketEventManager.unregisterPacketListener(list);
 		}
 	}
 

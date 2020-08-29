@@ -20,7 +20,7 @@ public final class PacketInjectorAPI {
 	 */
 	public static void sendPacketToClient(Player player, Object packet) {
 
-		com.fren_gor.packetInjectorAPI.PacketInjectorAPI.sendPacketToClient(player, packet);
+		com.fren_gor.packetInjectorAPI.api.PacketInjectorAPI.sendPacketToClient(player, packet);
 
 	}
 
@@ -36,7 +36,7 @@ public final class PacketInjectorAPI {
 	@Deprecated
 	public static void sendPacket(Player player, Object packet) {
 
-		com.fren_gor.packetInjectorAPI.PacketInjectorAPI.sendPacketToClient(player, packet);
+		com.fren_gor.packetInjectorAPI.api.PacketInjectorAPI.sendPacketToClient(player, packet);
 
 	}
 
@@ -50,7 +50,7 @@ public final class PacketInjectorAPI {
 	 */
 	public static void sendPacketToServer(Player player, Object packet) {
 
-		com.fren_gor.packetInjectorAPI.PacketInjectorAPI.sendPacketToServer(player, packet);
+		com.fren_gor.packetInjectorAPI.api.PacketInjectorAPI.sendPacketToServer(player, packet);
 	}
 
 }

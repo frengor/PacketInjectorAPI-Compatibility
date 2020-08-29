@@ -27,9 +27,9 @@ import org.bukkit.event.HandlerList;
 
 public final class PacketRetriveEvent extends PacketEvent {
 
-	private final com.fren_gor.packetInjectorAPI.events.PacketRetriveEvent e;
+	private final com.fren_gor.packetInjectorAPI.api.events.PacketRetriveEvent e;
 
-	public PacketRetriveEvent(com.fren_gor.packetInjectorAPI.events.PacketRetriveEvent e) {
+	public PacketRetriveEvent(com.fren_gor.packetInjectorAPI.api.events.PacketRetriveEvent e) {
 		super(true);
 		this.e = e;
 	}

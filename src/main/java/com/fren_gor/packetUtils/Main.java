@@ -27,10 +27,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.fren_gor.packetInjectorAPI.PacketInjectorPlugin;
 import com.fren_gor.packetInjectorAPI.ReflectionUtil;
-import com.fren_gor.packetInjectorAPI.events.PacketEventManager;
-import com.fren_gor.packetInjectorAPI.events.PacketListener;
-import com.fren_gor.packetInjectorAPI.events.PacketRetriveEvent;
-import com.fren_gor.packetInjectorAPI.events.PacketSendEvent;
+import com.fren_gor.packetInjectorAPI.api.PacketEventManager;
+import com.fren_gor.packetInjectorAPI.api.events.PacketRetriveEvent;
+import com.fren_gor.packetInjectorAPI.api.events.PacketSendEvent;
+import com.fren_gor.packetInjectorAPI.api.listeners.PacketListener;
 
 import lombok.Getter;
 

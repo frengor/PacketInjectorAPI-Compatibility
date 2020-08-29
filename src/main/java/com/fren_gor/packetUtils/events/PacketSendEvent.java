@@ -27,9 +27,9 @@ import org.bukkit.event.HandlerList;
 
 public final class PacketSendEvent extends PacketEvent {
 
-	private final com.fren_gor.packetInjectorAPI.events.PacketSendEvent e;
+	private final com.fren_gor.packetInjectorAPI.api.events.PacketSendEvent e;
 
-	public PacketSendEvent(com.fren_gor.packetInjectorAPI.events.PacketSendEvent e) {
+	public PacketSendEvent(com.fren_gor.packetInjectorAPI.api.events.PacketSendEvent e) {
 		super(true);
 		this.e = e;
 	}

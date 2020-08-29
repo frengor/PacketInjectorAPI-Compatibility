@@ -147,13 +147,4 @@ public final class ReflectionUtil {
 	@Getter
 	private static int release = com.fren_gor.packetInjectorAPI.ReflectionUtil.getRelease();
 
-	/**
-	 * Check if the server is in 1.7
-	 * 
-	 * @return If the server is in 1.7
-	 */
-	public static boolean versionIs1_7() {
-		return com.fren_gor.packetInjectorAPI.ReflectionUtil.versionIs1_7();
-	}
-
 }
