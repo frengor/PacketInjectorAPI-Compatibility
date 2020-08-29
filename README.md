@@ -1,5 +1,5 @@
 # PacketInjectorAPI-Compatibility
-[![](https://jitci.com/gh/frengor/PacketInjectorAPI-Compatibility/svg)](https://jitci.com/gh/frengor/PacketInjectorAPI-Compatibility/1.0.0)
+[![](https://jitci.com/gh/frengor/PacketInjectorAPI-Compatibility/svg)](https://jitci.com/gh/frengor/PacketInjectorAPI-Compatibility)
 
 Old-API compatibility for https://github.com/frengor/PacketInjectorAPI
 
