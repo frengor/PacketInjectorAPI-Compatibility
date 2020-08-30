@@ -30,10 +30,6 @@ import lombok.Setter;
 
 abstract class PacketEvent extends Event implements Cancellable {
 
-	@Getter
-	@Setter
-	private boolean cancelled = false;
-
 	public PacketEvent(boolean async) {
 		super(async);
 	}

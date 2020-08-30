@@ -64,6 +64,16 @@ public final class PacketSendEvent extends PacketEvent {
 
 	}
 
+	@Override
+	public boolean isCancelled() {
+		return e.isCancelled();
+	}
+
+	@Override
+	public void setCancelled(boolean cancel) {
+		e.setCancelled(cancel);
+	}
+
 	private static final HandlerList handlers = new HandlerList();
 
 	@Override

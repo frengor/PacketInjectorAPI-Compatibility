@@ -63,6 +63,16 @@ public final class PacketRetriveEvent extends PacketEvent {
 		return e.getValue(field);
 
 	}
+	
+	@Override
+	public boolean isCancelled() {
+		return e.isCancelled();
+	}
+
+	@Override
+	public void setCancelled(boolean cancel) {
+		e.setCancelled(cancel);
+	}
 
 	private static final HandlerList handlers = new HandlerList();
 
