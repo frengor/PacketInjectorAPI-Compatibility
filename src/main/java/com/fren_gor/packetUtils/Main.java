@@ -44,8 +44,12 @@ public final class Main extends JavaPlugin {
 	}
 
 	@Override
-	public void onEnable() {
+	public void onLoad() {
 		instance = this;
+	}
+
+	@Override
+	public void onEnable() {
 
 		if (ReflectionUtil.getVersion() < 14)
 			PacketEventManager.registerPacketListener(this, new PacketListener() {
