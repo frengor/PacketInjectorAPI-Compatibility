@@ -1,5 +1,5 @@
 name: ${project.name}
-main: com.fren_gor.packetInjectorAPI.PacketInjectorCompatibility
+main: com.fren_gor.packetUtils.Main
 version: ${project.version}
 author: fren_gor
 description: ${project.description}
